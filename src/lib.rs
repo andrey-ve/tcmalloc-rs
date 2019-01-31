@@ -4,7 +4,7 @@ use std::alloc::{GlobalAlloc, Layout};
 
 use std::os::raw::c_void;
 
-#[link(name = "tcmalloc")]
+#[link(name = "tcmalloc_minimal")]
 extern "C" {
     pub fn tc_memalign(alignment: usize, size: usize) -> *mut c_void;
     pub fn tc_free(ptr: *mut c_void);
